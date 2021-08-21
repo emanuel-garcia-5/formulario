@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <LINK REL=StyleSheet HREF="./style.css">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+</head>
+<body class="pure-form">
+    <form>
+        <p>
+            <label>Nombre
+                <input type="text">
+            </label>
+        </p>
+        <p>
+            <label>Telefono
+                <input type="tel">
+            </label>
+        </p>
+        <p>
+            <label>Email
+                <input type="email">
+            </label>
+        </p>
+            <fieldset>
+                <legend>Que taxi quiere?</legend>
+                <p>
+                    <label>Carrito
+                        <input type="radio" name = "taxi" value="car">
+                    </label>
+                </p>
+                <p>
+                    <label>Suv
+                        <input type="radio" name="taxi" value="suv">
+                    </label>
+                </p>
+                <p>
+                    <label>Tuc tuc
+                        <input type="radio" name="taxi" value="tuctuc">
+                    </label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Extras</legend>
+                <p>
+                    <label>
+                        <input type="checkbox" name="extras" value="baby">
+                        Silla de bebe
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="extras" value="musica">
+                        No regueton
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="extras" value="silla">
+                        Silla de de ruedas
+                    </label>
+                </p>
+            </fieldset>
+            <p>
+                <label>Dia y hora?
+                <input type="datetime-local" name="fecha">
+            </label>
+            </p>
+        <p>
+            <label>Lugar para recoger
+                <select id="pickup_place" name="pickup_place" >
+                    <option value="" selected="selected">Seleciones opcion</option>
+                    <option value="oficina">Oficina</option>
+                    <option value="oficina">Feria</option>
+                    <option value="La_u">Universidad</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <label>
+                Dejar en
+                <input type="text" name="dejar_en" required list="destino">
+            </label>
+        </p>
+        <datalist id="destino">
+            <option value="aeropuerto"></option>
+            <option value="playa"></option>
+            <option value="la_biblioteca"></option>
+        </datalist>
+        <p>
+            <label>
+                Instrucciones Especiales
+                <textarea name="comentarios" maxlength="500"></textarea>
+            </label>
+        </p>
+        <p>
+            <button class="pure-button pure-button-primary">Enviar</button>
+        </p>
+    </form>
+</body>
+</html>

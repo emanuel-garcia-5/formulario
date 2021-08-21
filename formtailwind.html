@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <LINK REL=StyleSheet HREF="./style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container w-full px-20">
+        <form class="mt-8 space-y-6">
+            <div>
+                <label class="sr-only">Nombre</label>
+                <input type="text" class="relative block w-full px-3 py-2 border border-red-400 rounded-t-md"
+                    placeholder="Nombre">
+            </div>
+            <div>
+                <label class="sr-only">Telefono</label>
+                <input type="tel" placeholder="Telefono" class="w-full px-3 py-2 border">
+
+            </div>
+            <div class="rounded-md shadow-sm -space-y-px">
+                <div>
+                    <label for="email-adress" class="sr-only">Email </label>
+                    <input id="email-adress" type="email" placeholder="Email address"
+                        class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm">
+                </div>
+            </div>
+            <fieldset class="border-solid border-4 border-light-blue-500 p-2 ">
+                <legend>Que taxi quiere?</legend>
+                <p>
+                    <label>Carrito</label>
+                    <input type="radio" name="taxi" value="car">
+
+                </p>
+                <p>
+                    <label>Suv </label>
+                    <input type="radio" name="taxi" value="suv">
+
+                </p>
+                <p>
+                    <label>Tuc tuc</label>
+                    <input type="radio" name="taxi" value="tuctuc">
+
+                </p>
+            </fieldset>
+            <fieldset class="border-solid border-4 border-light-blue-500 p-2">
+                <legend>Extras</legend>
+                <p>
+                    <label>
+                        Silla de bebe
+                    </label>
+                    <input type="checkbox" name="extras" value="baby">
+                </p>
+                <p>
+                    <label>
+                        No regueton
+                    </label>
+                    <input type="checkbox" name="extras" value="musica">
+                </p>
+                <p>
+                    <label>                        
+                        Silla de de ruedas
+                    </label>
+                    <input type="checkbox" name="extras" value="silla">
+                </p>
+            </fieldset>
+            <p>
+                <label>Dia y hora?</label>
+                    <input  class="border-solid border-4 border-light-purple-500 p-2" type="datetime-local" name="fecha">
+                
+            </p>
+            <p>
+                <label>Lugar para recoger</label>
+                    <select id="pickup_place" name="pickup_place" class="border-solid border-4 border-light-blue-500 p-2 ">
+                        <option value="" selected="selected">Seleciones opcion</option>
+                        <option value="oficina">Oficina</option>
+                        <option value="oficina">Feria</option>
+                        <option value="La_u">Universidad</option>
+                    </select>
+                
+            </p>
+            <p>
+                <label>
+                    Dejar en
+                </label>
+                    <input type="text" name="dejar_en" required list="destino"  class="border-4 border-blue-500 border-opacity-100">
+                
+            </p>
+            <datalist id="destino">
+                <option value="aeropuerto"></option>
+                <option value="playa"></option>
+                <option value="la_biblioteca"></option>
+            </datalist>
+            <p>
+                
+                    <textarea placeholder="Instruciones Especiales" name="comentarios" maxlength="500" class="border-solid border-4 border-red-500 border-opacity-100 w-full"></textarea>
+                
+            </p>
+            <p>
+                <button class="bg-blue-500 hover:bg-blue-700 ring-4 ring-indigo-300 w-20 mb-5">Enviar</button>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>
